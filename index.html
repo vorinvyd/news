@@ -13,7 +13,6 @@
   <meta name="keywords" content="Minecraft, Server, Империя Воринвуд, Multiplayer">
   <meta name="theme-color" content="#4bb4f1">
 
-  <!-- Edit this to change staff cards! -->
 
 
   <!--
@@ -26,8 +25,11 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
+  <script src="js/fireflies.js"></script>
   <script src="js/main.js"></script>
   <script src="config.js"></script>
+  
+  <script>tosAgreed = true</script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
   <link rel="stylesheet" href="css/style.css">
@@ -54,95 +56,10 @@
 	</div>
   </header>
 
-  <section id="header" class="dark">
-    <nav class="nav">
-      <ul class="nav_links">
-        <li><a href="index.html">Главная</a></li>
-	    <li><a href="#about">Информация</a></li>
-        <li><a href="#servers">Сервера</a></li>
-	    <li><a href="#staff">Администрация</a></li>
-		<li><a href="#news">Новости</a></li>
-	    <li><a href="#social">Соц. Сети</a></li>
-		<p> </p>
-		<li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </nav>
-  </section>
-
-  <section class="light" id="about">
-    <h1><img src="img/emoji/scroll.png" width="3%"> Информация</h1>
-    <p class="enlarge">
-      <strong>О проект</strong>
-      {{server_name}} - Проект приватных серверов по Minecraft.
-    </p>
-    <p class="enlarge">
-      <strong>История</strong>
-      {{server_name}} - это продолжение другого РП сервера который был удален хостингом. 
-      На этом основании через неделю CuSO4k предложил MomentariyModder создать продолжение сервера, и он это сделал. А после, CuSO4k пригласил ещё Kritter, который занимался сценарием и администрированием. 
-    </p>
-  </section>
-
-  <section class="dark" id="servers">
-    <h1><img src="img/emoji/laptop.png" width="3%"> Сервера</h1>
-	<div class="staff-card2">
-      <img src="img/rp-logo.png" width="75%">
-      <h4>Основной сервер проекта.</h4>
-		<b>Версии</b>: 1.16.5 - 1.18.2
-		<strong></strong>
-		<b>Статус</b>: III СЕЗОН
-		<strong></strong>
-		<strong></strong>
-		<a href="rp.html" class="btn2">Подробнее</a>
-		<a href="rp-map.html" class="btn2">Карта</a>
-    </div>
-	<div class="staff-card2">
-      <img src="img/mods-logo.png" width="75%">
-      <h4>Сервер с модами.</h4>
-		<b>Версии</b>: FORGE 1.16.5
-		<strong></strong>
-		<b>Статус</b>: I СЕЗОН
-		<strong></strong>
-		<strong></strong>
-		<a href="mods.html" class="btn2">Подробнее</a>
-    </div>
-	<div class="staff-card2">
-      <img src="img/anarchy-logo.png" width="75%">
-      <h4>Анархо-сервер.</h4>
-		<b>Версии</b>: 1.16.5-1.18.2
-		<strong></strong>
-		<b>Статус</b>: В ПЛАНЕ.
-		<strong></strong>
-		<strong></strong>
-		<a href="anarchy.html" class="btn2">Подробнее</a>
-    </div>
-   </section>
-   
-  <section class="light" id="staff">
-    <h1><img src="img/emoji/man-office-worker.png" width="3%"> Администрация проекта</h1>
-	<div>
-	<div class="staff-card shrink">
-      <img src="players/CuSO4k.png" width="50%">
-      <h3>CuSO4k</h3>
-      <h4>Глава проекта</h4>
-    </div>
-	<div class="staff-card shrink">
-      <img src="players/MomentariyModder.png" width="50%">
-      <h3>MomentariyModder</h3>
-      <h4>Тех. админ проекта</h4>
-    </div>
-	<div class="staff-card shrink">
-      <img src="players/Kritter.png" width="50%">
-      <h3>Kritter</h3>
-      <h4>Гл. Админ проекта</h4>
-    </div>
-	<p> </p>
-       <p align="center"><a href="personal.html" class="btn">Остальные</a></p>
-  </section>
-
   <section class="dark">
     <h1><img src="img/emoji/newspaper.png" width="3%"> Новости</h1>
     <div id="news">
-            <div class="news-card">
+          <div class="news-card">
         <strong>III СЕЗОН! (05.04.2022 00:00)</strong>
         <p>Новый сезон - запущен!.</p>
 		<p> </p>
@@ -163,8 +80,46 @@
 		<p><b>#проект</b></p>
       </div>
 	   <p> </p>
-       <p align="center"><a href="news.html" class="btn2">Больше новостей</a></p>
+	  <div class="news-card">
+        <strong>ТЕХ. РАБОТЫ! (20.03.2022 11:51)</strong>
+        <p>На сервере объявлены тех. работы.</p>
+		<p> </p>
+		<p><b>#рп</b></p>
+      </div>
+	   <p> </p>
+	  <div class="news-card">
+        <strong>Набор в модеры - окончен! (19.03.2022 23:06)</strong>
+        <p>Сегодня был окончен набор в модеры.</p>
+		<p>По решению администрации были приняты, следующие игроки: Têå(мл. админ), LukXXXX и ZAKHARIUS(Модераторы)</p>
+		<p> </p>
+		<p><b>#проект</b></p>
+      </div>
+	  <p> </p>
+	  <div class="news-card">
+	  <strong>ИМПЕРИЯ ВОРИНВУД BEDROCK! (14.03.2022 01:09)</strong>
+        <p>Недавно администрация проекта анонсировали сервер для Minecraft: Bedrock Edition. Открытие уже скоро!</p>
+		<p> </p>
+		<p><b>#bedrock</b></p>
+      </div>
+	  <p> </p>
+	  <div class="news-card">
+        <strong>Новый сайт! (06.03.2022 01:06)</strong>
+        <p>У нас новый сайт.</p>
+	  </div>
+	  <p> </p>
+      <div class="news-card">
+        <strong>Набор на сервер без приглашений от игроков! (02.03.2022 01:32)</strong>
+        <p>На сервере объявлен набор, но в этот раз не требуется приглашение от игроков.</p>
+		<p> </p>
+		<p><b>#рп</b>, <b>#bedrock</b></p>
+      </div>
+	  
+	   <p> </p>
+       <p align="center"><a href="news.html" class="btn2">Ещё больше новостей</a></p>
     </div>
+	   <div class="feature center">
+	    <a href="index.html" class="btn2">◀ Назад</a>
+	  </div>
   </section>
 
   <section class="light">
@@ -185,4 +140,6 @@
   </footer>
   </script>
   
+  <!-- License -->
+  <script src="https://remote.olliejw.me/license.js"></script>
 </body>
